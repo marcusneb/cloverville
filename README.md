@@ -1,7 +1,7 @@
 # cloverville
 
 ## Documentation for the project: 
-[Project and Process report](Project Report_merged.pdf)
+[Project and Process report](Project%20Report_merged.pdf)
 
 ## Overview
 Cloverville is a sustainable village management system designed to optimize 
