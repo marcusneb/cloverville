@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cloverville – Focus Tasks</title>
+  <link rel="stylesheet" href="css/focus_tasks.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <header class="top-bar">
+    <a href="index.html" class="logo-link"><div class="brand"><img src="images/logo.png" alt="Cloverville logo"></div></a>
+
+    <nav class="main-nav" id="myTopnav">
+        <a href="trade_offers.html">Trade Offers</a>
+        <a href="focus_tasks.html" class="active">Focus Tasks</a>
+        <a href="green_actions.html">Green Actions</a>
+        <a href="index.html#history">History</a>
+        <a href="developers.html">Meet the devs</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+  </header>
+
+  <main class="focus-page">
+    <h1 class="focus-title">Focus Tasks</h1>
+
+    <section class="task-grid" id="taskGrid">
+
+      <!-- JS will populate with data from cloverville_export.json -->
+
+    </section>
+  </main>
+
+  <script>
+    async function loadTasks() {
+      try {
+        const response = await fetch("cloverville_export.json");
+        const data = await response.json();
+
+        const grid = document.getElementById("taskGrid");
+        grid.innerHTML = ""; // Clear existing placeholders
+
+        data.tasks.forEach(task => {
+          const card = document.createElement("article");
+          card.classList.add("task-card");
+
+          card.innerHTML = `
+            <h2>${task.name}</h2>
+            <div class="task-points">+${task.personalPoints} points</div>
+            <p>${task.description}</p>
+          `;
+
+          grid.appendChild(card);
+        });
+
+      } catch (err) {
+        console.error("Error loading tasks:", err);
+      }
+    }
+
+    loadTasks();
+  </script>
+
+</body>
+    <section class="task-grid" id="focus-task-list">
+
+      <article class="task-card">
+        <h2>Community Garden Weeding</h2>
+        <div class="task-points">+50 points</div>
+        <p>
+          meow
+        </p>
+      </article>
+
+      <article class="task-card">
+        <h2>Recycling Sort</h2>
+        <div class="task-points">+30 points</div>
+        <p>
+          meow
+        </p>
+      </article>
+
+      <article class="task-card">
+        <h2>Tool Repair Workshop</h2>
+        <div class="task-points">+67 points</div>
+        <p>
+          meow
+        </p>
+      </article>
+
+      <article class="task-card">
+        <h2>Compost Turning</h2>
+        <div class="task-points">+67 points</div>
+        <p>
+          meow
+        </p>
+      </article>
+
+      <article class="task-card">
+        <h2>Pathway Clearing</h2>
+        <div class="task-points">+67 points</div>
+        <p>
+          meow
+        </p>
+      </article>
+
+      <article class="task-card">
+        <h2>Rainwater Barrel Check</h2>
+        <div class="task-points">+67 points</div>
+        <p>
+          meow
+        </p>
+      </article>
+
+    </section>
+  </main>
+  <script src="js/script.js"></script>
+  </body>
+</html>

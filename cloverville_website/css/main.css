@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f3e8;
+  color: #234126;
+}
+
+.top-bar {
+  background-color: #f5f3e8;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.brand img {
+  width: 120px;
+  height: auto;
+}
+
+.main-nav {
+  overflow: hidden;
+}
+
+.main-nav a {
+  float: left;
+  display: block;
+  color: #234126;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main-nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.main-nav a.active {
+  background-color: #234126;
+  color: white;
+}
+
+.main-nav .icon {
+  display: none;
+}
+
+.hero {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 40px;
+}
+
+.hero-text {
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -100px;
+}
+.community-pool {
+  margin-top: 20px;
+  padding: 14px 20px;
+  background-color: #e9f5ec;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.community-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2f6f4e;
+  margin: 0;
+}
+
+.community-value {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1f4f38;
+  margin: 4px 0 0 0;
+}
+
+
+.hero-welcome {
+  margin: 0;
+  font-size: 40px;
+  color: #505050;
+  text-align: center;
+}
+
+.hero-title {
+  margin: 8px 0 12px;
+  font-size: 100px;
+  color: #113F07;
+  text-align: center;
+}
+
+.hero-desc {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 20px;
+  color: #000000;
+  text-align: center;
+}
+
+.hero-image {
+  max-width: 490px;
+  height: auto;
+  margin-top: 95px;
+}
+
+.hero-image img,
+.hero-image video {
+  max-width: 100%;
+}
+
+.bottom-section {
+  background-color: #113F07;
+  color: #ffffff;
+  border-radius: 40px 40px 0 0;
+  padding: 100px 120px;
+  margin: 0 auto;
+}
+
+.about-us h2,
+.goals h2,
+.developers-container h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.about-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.about-layout p {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.history-text {
+  width: 100%;
+}
+
+.goals {
+  margin-top: 40px;
+}
+
+.goals-lists {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  font-size: 18px;
+}
+
+.goals ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.goals li {
+  margin-bottom: 10px;
+}
+
+.developers-container {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+.developers-container p {
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.dev-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.dev-card {
+  text-align: center;
+  width: 150px;
+}
+
+.dev-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  margin-bottom: 15px;
+}
+
+.dev-card h3 {
+  font-size: 20px;
+  margin: 5px 0;
+  color: #fff;
+}
+
+.dev-email {
+  font-size: 14px;
+  color: #ddd;
+  text-decoration: none;
+}
+
+.dev-email:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .bottom-section {
+    padding: 60px 40px;
+  }
+
+  .about-layout,
+  .goals-lists,
+  .dev-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image-placeholder {
+    margin: 0 auto;
+  }
+
+  .main-nav a:not(:first-child) {
+    display: none;
+  }
+
+  .main-nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main-nav.responsive {
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .main-nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .main-nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

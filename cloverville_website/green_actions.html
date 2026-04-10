@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cloverville – Green Actions</title>
+  <link rel="stylesheet" href="css/green_actions.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <header class="top-bar">
+    <a href="index.html">
+      <div class="brand">
+        <img src="images/logo.png" alt="Cloverville logo">
+      </div>
+    </a>
+
+    <nav class="main-nav">
+      <a href="trade_offers.html">Trade Offers</a>
+      <a href="focus_tasks.html">Focus Tasks</a>
+      <a href="green_actions.html" class="active">Green Actions</a>
+      <a href="index.html#history">History</a>
+      <a href="developers.html">Meet the devs</a>
+    </nav>
+  </header>
+
+  <div class="community-pool">
+    <p class="community-label">Community Pool</p>
+    <p class="community-value">
+      <span id="communityPoolValue">0</span> points
+    </p>
+  </div>
+
+  <main class="green-page">
+    <h1 class="green-title">History of Green Actions</h1>
+
+    <p class="points-summary">
+      Total Green Points: <span id="totalGreenPoints">0 points</span>
+    </p>
+
+    <section class="rewards-section">
+      <div class="rewards-container" id="rewardsContainer">
+        <div class="reward-item" data-threshold="500">
+          <div class="reward-icon">🔒</div>
+          <div class="reward-cost">500 pts</div>
+          <h3>Flower Planting Party</h3>
+        </div>
+
+        <div class="reward-item" data-threshold="1000">
+          <div class="reward-icon">🔒</div>
+          <div class="reward-cost">1000 pts</div>
+          <h3>New Park Bench</h3>
+        </div>
+
+        <div class="reward-item" data-threshold="2000">
+          <div class="reward-icon">🔒</div>
+          <div class="reward-cost">2000 pts</div>
+          <h3>Village Pizza Festival</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="green-grid" id="greenGrid"></section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

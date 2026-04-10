@@ -1,0 +1,90 @@
+{
+  "taskLog": [],
+  "tradeOffers": [
+    {
+      "owner": "Dubai",
+      "priceOrService": "200",
+      "pointCost": 200,
+      "tradeOffer": "Burj Khalifa",
+      "status": "Unassigned"
+    },
+    {
+      "owner": "Doe",
+      "priceOrService": "250",
+      "pointCost": 250,
+      "tradeOffer": "Poork",
+      "status": "Unassigned"
+    }
+  ],
+  "residents": [
+    {
+      "participationBoostPercent": 0,
+      "personalPoints": 0,
+      "name": "John",
+      "greenPoints": 20,
+      "publicId": 1
+    },
+    {
+      "participationBoostPercent": 0,
+      "personalPoints": 50,
+      "name": "Labubu",
+      "greenPoints": 0,
+      "publicId": 2
+    },
+    {
+      "participationBoostPercent": 0,
+      "personalPoints": 0,
+      "name": "Pork",
+      "greenPoints": 50,
+      "publicId": 3
+    },
+    {
+      "participationBoostPercent": 0,
+      "personalPoints": 150,
+      "name": "Doe",
+      "greenPoints": 0,
+      "publicId": 4
+    },
+    {
+      "participationBoostPercent": 0,
+      "personalPoints": 0,
+      "name": "Dubai",
+      "greenPoints": 0,
+      "publicId": 5
+    },
+    {
+      "participationBoostPercent": 0,
+      "personalPoints": 0,
+      "name": "Chocolate",
+      "greenPoints": 10,
+      "publicId": 6
+    }
+  ],
+  "communityPool": 200,
+  "tasks": [
+    {
+      "personalPoints": 200,
+      "name": "Do gardening",
+      "description": "Clean the leaves the autumn left behind"
+    },
+    {
+      "personalPoints": 150,
+      "name": "Clean the Village Hall",
+      "description": "Wipe the windows and clean up"
+    }
+  ],
+  "greenActions": [
+    {
+      "name": "Biked to work",
+      "greenPoints": 20
+    },
+    {
+      "name": "Recycled",
+      "greenPoints": 10
+    },
+    {
+      "name": "Used solar panels",
+      "greenPoints": 50
+    }
+  ]
+}

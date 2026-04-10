@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trade Offers - Cloverville</title>
+  <link rel="stylesheet" href="css/trade_offers.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <a href="index.html"><div class="brand"><img src="images/logo.png" alt="Cloverville logo"></div></a>
+
+    <nav class="main-nav">
+      <a href="trade_offers.html" class="active">Trade Offers</a>
+      <a href="focus_tasks.html">Focus Tasks</a>
+      <a href="green_actions.html">Green Actions</a>
+      <a href="index.html#history">History</a>
+      <a href="developers.html">Meet the devs</a>
+    </nav>
+  </header>
+
+  <!-- PAGE TITLE -->
+  <main>
+    <h1 class="page-title">Trade Offers</h1>
+
+    <!-- TRADE TABLE -->
+    <section class="table-section">
+      <table class="trade-table">
+        <thead>
+          <tr>
+            <th class="owner-col">Owner</th>
+            <th>Trade Offer</th>
+            <th>Exchange for<br>(points or service)</th>
+          </tr>
+        </thead>
+
+        <tbody id="trade-body">
+          <!-- JS will insert rows here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- JSON LOADING SCRIPT -->
+  <script>
+    async function loadTradeOffers() {
+      try {
+        const response = await fetch("cloverville_export.json");
+        if (!response.ok) {
+          console.error("Failed to load JSON file.");
+          return;
+        }
+
+        const data = await response.json();
+        const offers = data.tradeOffers || [];
+
+        const tbody = document.getElementById("trade-body");
+        tbody.innerHTML = ""; // Clear existing rows
+
+        offers.forEach(offer => {
+          const row = document.createElement("tr");
+
+             row.innerHTML = `
+            <td>${offer.owner}</td>
+           <td>${offer.tradeOffer}</td>
+          <td>${offer.priceOrService}</td>
+          `;
+
+
+
+          tbody.appendChild(row);
+        });
+
+      } catch (error) {
+        console.error("Error loading trade offers:", error);
+      }
+    }
+
+    loadTradeOffers();
+  </script>
+
+<script src="js/script.js"></script>
+</body>
+</html>
